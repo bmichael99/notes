@@ -1,0 +1,1 @@
+for MCF using the API they get a list of options on where they want to return, and then they get a qr code, but actually only label for right now, and they go drop off the 

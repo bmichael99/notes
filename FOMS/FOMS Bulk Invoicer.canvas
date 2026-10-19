@@ -1,0 +1,31 @@
+{
+	"nodes":[
+		{"id":"ca44740a76a1b5af","type":"text","text":"[[FOMS FulfillmentOrderLineItem|FulfillmentOrderLineItem]]","x":11,"y":-85,"width":250,"height":60},
+		{"id":"62878a5f781c1f7b","type":"text","text":"Price","x":136,"y":76,"width":250,"height":60},
+		{"id":"081f33441880fcd9","type":"text","text":"MSRP","x":-114,"y":76,"width":250,"height":60},
+		{"id":"decision_node","type":"text","text":"Decision: Is MSRP < Price?","x":-8,"y":230,"width":300,"height":50},
+		{"id":"yes_branch","type":"text","text":"YES: MSRP < Price\nInvoice Price = Price\nDelta = 0 (No Credit Memo)","x":-254,"y":380,"width":280,"height":100},
+		{"id":"no_branch","type":"text","text":"NO: MSRP >= Price\nInvoice Price = MSRP\nDelta = MSRP - Price","x":246,"y":380,"width":280,"height":100},
+		{"id":"final_invoice","type":"text","text":"Final Booked Invoice Price\n(NetSuite Invoice)","x":-254,"y":661,"width":280,"height":60},
+		{"id":"final_credit","type":"text","text":"Credit Memo Price (Delta)\nPer SKU from SQL","x":246,"y":661,"width":280,"height":55},
+		{"id":"sql_calc","type":"text","text":"SQL Query (bulk_invoice_orders.php)\nSUM(delta) GROUP BY SKU","x":246,"y":786,"width":280,"height":85},
+		{"id":"netsuite_process","type":"text","text":"NetSuiteAdapter\nprocessBulkCreditMemo()","x":246,"y":940,"width":280,"height":55},
+		{"id":"prepare_data","type":"text","text":"prepareBulkCreditMemoDataForNetSuite()\nFor each item:\n  amount = delta\n  total += amount","x":246,"y":1069,"width":280,"height":145},
+		{"id":"final_calc","type":"text","text":"Final Credit Memo Amount\n  totalDiscountAmount = sum(all deltas)\n  rounded to 2 decimals\n  applied to invoice","x":246,"y":1281,"width":280,"height":145}
+	],
+	"edges":[
+		{"id":"c70d4d78015b7b5d","fromNode":"ca44740a76a1b5af","fromSide":"bottom","toNode":"081f33441880fcd9","toSide":"top","label":"stores"},
+		{"id":"9075f2c2f01b118f","fromNode":"ca44740a76a1b5af","fromSide":"bottom","toNode":"62878a5f781c1f7b","toSide":"top","label":"stores"},
+		{"id":"msrp_to_decision","fromNode":"081f33441880fcd9","fromSide":"bottom","toNode":"decision_node","toSide":"top"},
+		{"id":"price_to_decision","fromNode":"62878a5f781c1f7b","fromSide":"bottom","toNode":"decision_node","toSide":"top"},
+		{"id":"decision_to_yes","fromNode":"decision_node","fromSide":"left","toNode":"yes_branch","toSide":"top","label":"yes"},
+		{"id":"decision_to_no","fromNode":"decision_node","fromSide":"right","toNode":"no_branch","toSide":"top","label":"no"},
+		{"id":"yes_to_invoice","fromNode":"yes_branch","fromSide":"bottom","toNode":"final_invoice","toSide":"top","label":"invoice_price"},
+		{"id":"no_to_invoice","fromNode":"no_branch","fromSide":"bottom","toNode":"final_invoice","toSide":"top","label":"invoice_price"},
+		{"id":"no_to_credit","fromNode":"no_branch","fromSide":"bottom","toNode":"final_credit","toSide":"top","label":"delta"},
+		{"id":"credit_to_sql","fromNode":"final_credit","fromSide":"bottom","toNode":"sql_calc","toSide":"top","label":"aggregated"},
+		{"id":"sql_to_netsuite","fromNode":"sql_calc","fromSide":"bottom","toNode":"netsuite_process","toSide":"top","label":"creditMemoItems[]"},
+		{"id":"netsuite_to_prepare","fromNode":"netsuite_process","fromSide":"bottom","toNode":"prepare_data","toSide":"top","label":"calls"},
+		{"id":"prepare_to_final","fromNode":"prepare_data","fromSide":"bottom","toNode":"final_calc","toSide":"top","label":"totalDiscountAmount"}
+	]
+}

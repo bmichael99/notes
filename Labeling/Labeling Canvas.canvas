@@ -1,0 +1,12 @@
+{
+	"nodes":[
+		{"id":"146cd62ffce1c482","x":-300,"y":-180,"width":250,"height":60,"type":"text","text":"##  Shipment Order\n\n\n"},
+		{"id":"9f6c6945e9ee5f93","x":-300,"y":0,"width":250,"height":60,"type":"text","text":"## Line Items"},
+		{"id":"bbb50737ca741182","x":-300,"y":180,"width":250,"height":60,"type":"text","text":"## Carton Labels"},
+		{"id":"26596ed7b9cbfe63","x":-800,"y":-640,"width":400,"height":400,"type":"file","file":"Labeling/Labeling.md"}
+	],
+	"edges":[
+		{"id":"2284c8802dd89643","fromNode":"146cd62ffce1c482","fromSide":"bottom","toNode":"9f6c6945e9ee5f93","toSide":"top","label":"1 to m"},
+		{"id":"ee7c543380725809","fromNode":"9f6c6945e9ee5f93","fromSide":"bottom","toNode":"bbb50737ca741182","toSide":"top","label":"1 to m"}
+	]
+}

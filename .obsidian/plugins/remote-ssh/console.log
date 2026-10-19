@@ -1,0 +1,26 @@
+{"ts":"2026-07-22T18:15:14.036Z","level":"info","msg":"Plugin remote-ssh v1.1.7 loaded"}
+{"ts":"2026-07-22T18:15:55.520Z","level":"info","msg":"SftpClient: connecting to ec2-54-213-188-64.us-west-2.compute.amazonaws.com:22 as ubuntu"}
+{"ts":"2026-07-22T18:15:55.523Z","level":"info","msg":"Auth: using private key /Users/michaelbrandmeyer/.ssh/michaelbkey.pem"}
+{"ts":"2026-07-22T18:15:55.722Z","level":"info","msg":"TOFU: Trusting new host key for ec2-54-213-188-64.us-west-2.compute.amazonaws.com:22: SHA256:50c9362c494bf478..."}
+{"ts":"2026-07-22T18:15:56.174Z","level":"info","msg":"SftpClient: SSH ready (ec2-54-213-188-64.us-west-2.compute.amazonaws.com)"}
+{"ts":"2026-07-22T18:15:57.413Z","level":"info","msg":"SftpClient: SFTP channel open"}
+{"ts":"2026-07-22T18:16:21.281Z","level":"info","msg":"SftpClient: connecting to ec2-54-213-188-64.us-west-2.compute.amazonaws.com:22 as ubuntu"}
+{"ts":"2026-07-22T18:16:21.281Z","level":"info","msg":"Auth: using private key /Users/michaelbrandmeyer/.ssh/michaelbkey.pem"}
+{"ts":"2026-07-22T18:16:21.986Z","level":"info","msg":"SftpClient: SSH ready (ec2-54-213-188-64.us-west-2.compute.amazonaws.com)"}
+{"ts":"2026-07-22T18:16:22.534Z","level":"info","msg":"SftpClient: SFTP channel open"}
+{"ts":"2026-07-22T18:16:28.413Z","level":"info","msg":"SftpClient: connecting to ec2-54-213-188-64.us-west-2.compute.amazonaws.com:22 as ubuntu"}
+{"ts":"2026-07-22T18:16:28.413Z","level":"info","msg":"Auth: using private key /Users/michaelbrandmeyer/.ssh/michaelbkey.pem"}
+{"ts":"2026-07-22T18:16:29.084Z","level":"info","msg":"SftpClient: SSH ready (ec2-54-213-188-64.us-west-2.compute.amazonaws.com)"}
+{"ts":"2026-07-22T18:16:29.540Z","level":"info","msg":"SftpClient: SFTP channel open"}
+{"ts":"2026-07-22T18:16:32.603Z","level":"info","msg":"SftpClient: connecting to ec2-54-213-188-64.us-west-2.compute.amazonaws.com:22 as ubuntu"}
+{"ts":"2026-07-22T18:16:32.603Z","level":"info","msg":"Auth: using private key /Users/michaelbrandmeyer/.ssh/michaelbkey.pem"}
+{"ts":"2026-07-22T18:16:33.256Z","level":"info","msg":"SftpClient: SSH ready (ec2-54-213-188-64.us-west-2.compute.amazonaws.com)"}
+{"ts":"2026-07-22T18:16:33.684Z","level":"info","msg":"SftpClient: SFTP channel open"}
+{"ts":"2026-07-22T18:16:39.846Z","level":"info","msg":"SftpClient: connecting to ec2-54-213-188-64.us-west-2.compute.amazonaws.com:22 as ubuntu"}
+{"ts":"2026-07-22T18:16:39.847Z","level":"info","msg":"Auth: using private key /Users/michaelbrandmeyer/.ssh/michaelbkey.pem"}
+{"ts":"2026-07-22T18:17:13.015Z","level":"info","msg":"SftpClient: connecting to ec2-54-213-188-64.us-west-2.compute.amazonaws.com:22 as ubuntu"}
+{"ts":"2026-07-22T18:17:13.015Z","level":"info","msg":"Auth: using private key /Users/michaelbrandmeyer/.ssh/michaelbkey.pem"}
+{"ts":"2026-07-22T18:17:42.380Z","level":"info","msg":"SftpClient: connecting to ec2-54-213-188-64.us-west-2.compute.amazonaws.com:22 as ubuntu"}
+{"ts":"2026-07-22T18:17:42.380Z","level":"info","msg":"Auth: using private key /Users/michaelbrandmeyer/.ssh/michaelbkey.pem"}
+{"ts":"2026-07-22T18:44:03.782Z","level":"info","msg":"Plugin remote-ssh v1.1.7 loaded"}
+{"ts":"2026-07-22T18:44:26.312Z","level":"info","msg":"Plugin remote-ssh unloading"}

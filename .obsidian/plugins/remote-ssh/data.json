@@ -1,0 +1,18 @@
+{
+  "profiles": [],
+  "activeProfileId": null,
+  "enableDebugLog": false,
+  "maxLogLines": 500,
+  "reconnectMaxRetries": 5,
+  "clientId": "",
+  "userName": "",
+  "lazyFolderLoad": true,
+  "autoConnectProfileId": null,
+  "terminalFontSize": 12,
+  "terminalScrollback": 1000,
+  "onboardingCompleted": true,
+  "hostKeyStore": {
+    "ec2-54-213-188-64.us-west-2.compute.amazonaws.com:22": "50c9362c494bf478ea984e14c3e98af51fe2a289d3f88307f9445c84488b1c9d"
+  },
+  "secrets": {}
+}

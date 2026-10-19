@@ -1,0 +1,9 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - type == "model"
+    order:
+      - file.name
+      - type
